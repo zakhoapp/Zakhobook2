@@ -126,6 +126,24 @@
       main .glass-card-button { padding: 11px 10px !important; }
       main .glass-card-button > div:first-child { gap: 9px; }
     }
+  
+    /* Mobile vertical rhythm correction: no large blank area between heading and links */
+    @media (max-width: 639px) {
+      body { min-height: 100svh; justify-content: flex-start !important; }
+      header { flex: 0 0 auto; padding-top: 20px !important; padding-bottom: 0 !important; }
+      header > div:first-of-type { margin-bottom: 10px !important; }
+      header > div:first-of-type > .group > div { height: 112px !important; width: min(100%, 125px) !important; }
+      header h1 { font-size: clamp(20px, 5.3vw, 25px) !important; line-height: 1.55 !important; margin-bottom: 5px !important; }
+      header p { font-size: 12px !important; line-height: 1.7 !important; }
+      main { flex: 0 0 auto !important; justify-content: flex-start !important; padding-top: 20px !important; padding-bottom: 12px !important; }
+      main > div { gap: 11px !important; }
+      main .glass-card-button { min-height: 72px !important; padding: 10px 13px !important; }
+      footer { margin-top: auto; padding: 18px 12px 15px !important; }
+    }
+    @media (max-width: 360px) {
+      header > div:first-of-type > .group > div { height: 98px !important; }
+      main { padding-top: 14px !important; }
+    }
   </style>
 </head>
 <body class="relative flex flex-col justify-between items-center selection:bg-sky-200 selection:text-sky-900 min-h-screen">
